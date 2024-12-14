@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Dialog
+        title="Edit Columns"
+        contentWidth="550px">
+        <content>
+            <List
+                items="{
+                    path: 'columns>/columns',
+                    sorter: {
+                        path: 'order',
+                        descending: false
+                    }
+                }">
+                <CustomListItem>
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiSmallMargin">
+                        <VBox>
+                            <Label text="{columns>name}" design="Bold" />
+                            <Input
+                                value="{columns>width}"
+                                placeholder="Width (e.g., 200px)"
+                                width="100px" />
+                        </VBox>
+                        <HBox>
+                            <CheckBox
+                                selected="{columns>visible}"
+                                text="Visible" />
+                            <Button
+                                icon="sap-icon://arrow-top"
+                                press="onMoveUp"
+                                tooltip="Move Up"
+                                class="sapUiTinyMarginBegin" />
+                            <Button
+                                icon="sap-icon://arrow-bottom"
+                                press="onMoveDown"
+                                tooltip="Move Down"
+                                class="sapUiTinyMarginBegin" />
+                        </HBox>
+                    </HBox>
+                </CustomListItem>
+            </List>
+        </content>
+        <buttons>
+            <Button
+                text="Save"
+                type="Emphasized"
+                press="onSaveColumns" />
+            <Button
+                text="Cancel"
+                press="onCloseDialog" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
+	
+	<VBox id="3523erw235" core:require="{ handler: 'engagementguide/ext/fragment/EngagementObjectPageSentimentFragment'}">
+		<Label id="mytext" text="Sentiment"/>
+		<ObjectStatus core:require="{ handler: 'engagementguide/ext/fragment/SentimentFragment'}" id="myid" icon="{path: 'sentiment', formatter: 'handler.getIcon'}"/>
+		
+
+	</VBox>
+
+</core:FragmentDefinition>

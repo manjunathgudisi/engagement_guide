@@ -1,0 +1,380 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Measures.V1.xml">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/odata/v4/catalog/$metadata">
+        <edmx:Include Namespace="CatalogService"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="CatalogService.CustomerEngagements">
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneratedGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CRM ID"/>
+                                    <PropertyValue Property="Value" Path="CRMId"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Customer"/>
+                                    <PropertyValue Property="Value" Path="customerName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Classification"/>
+                                    <PropertyValue Property="Value" Path="classification"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Industry"/>
+                                    <PropertyValue Property="Value" Path="industry"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Region"/>
+                                    <PropertyValue Property="Value" Path="region"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Program"/>
+                                    <PropertyValue Property="Value" Path="programName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Start Date"/>
+                                    <PropertyValue Property="Value" Path="startDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="End Date"/>
+                                    <PropertyValue Property="Value" Path="endDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Duration"/>
+                                    <PropertyValue Property="Value" Path="duration"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CVJ Phase"/>
+                                    <PropertyValue Property="Value" Path="CVJPhase"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="EA"/>
+                                    <PropertyValue Property="Value" Path="eaName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="EA Email"/>
+                                    <PropertyValue Property="Value" Path="eaEmail"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="GeneratedFacet1"/>
+                            <PropertyValue Property="Label" String="General Information"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneratedGroup"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Activities"/>
+                            <PropertyValue Property="ID" String="Activities"/>
+                            <PropertyValue Property="Target" AnnotationPath="activities/@UI.LineItem#Activities"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Customer"/>
+                            <PropertyValue Property="Value" Path="customerName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Classification"/>
+                            <PropertyValue Property="Value" Path="classification"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Industry"/>
+                            <PropertyValue Property="Value" Path="industry"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="CVJ Phase"/>
+                            <PropertyValue Property="Value" Path="CVJPhase"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="sentiment"/>
+                            <PropertyValue Property="Value" Path="sentiment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Program"/>
+                            <PropertyValue Property="Value" Path="programName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="EA"/>
+                            <PropertyValue Property="Value" Path="eaName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Country"/>
+                            <PropertyValue Property="Value" Path="country"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Start Date"/>
+                            <PropertyValue Property="Value" Path="startDate"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="customerName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="TypeName" String=""/>
+                        <PropertyValue Property="TypeNamePlural" String=""/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.Activity">
+                <Annotation Term="UI.LineItem" Qualifier="Activities">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="activityName"/>
+                            <PropertyValue Property="Label" String="Activity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="description"/>
+                            <PropertyValue Property="Label" String="Description"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SAPEAFPhase"/>
+                            <PropertyValue Property="Label" String="SAP EAF Phase"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="status"/>
+                            <PropertyValue Property="Label" String="Status"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="outcome"/>
+                            <PropertyValue Property="Label" String="Outcome"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Objective"/>
+                            <PropertyValue Property="ID" String="Objective"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Objective"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Steps"/>
+                            <PropertyValue Property="ID" String="Steps"/>
+                            <PropertyValue Property="Target" AnnotationPath="steps/@UI.LineItem#Steps"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Tools"/>
+                            <PropertyValue Property="ID" String="Tools"/>
+                            <PropertyValue Property="Target" AnnotationPath="tools/@UI.LineItem#Tools"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Stakeholders"/>
+                            <PropertyValue Property="ID" String="Stakeholders"/>
+                            <PropertyValue Property="Target" AnnotationPath="stakeholders/@UI.LineItem#Stakeholders"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Services"/>
+                            <PropertyValue Property="ID" String="Services"/>
+                            <PropertyValue Property="Target" AnnotationPath="services/@UI.LineItem#Services"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="References"/>
+                            <PropertyValue Property="ID" String="References"/>
+                            <PropertyValue Property="Target" AnnotationPath="references/@UI.LineItem#References"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Objective">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Activity"/>
+                                <PropertyValue Property="Value" Path="activityName"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Description"/>
+                                <PropertyValue Property="Value" Path="description"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Objective"/>
+                                <PropertyValue Property="Value" Path="outcome"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Status"/>
+                                <PropertyValue Property="Value" Path="status"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="SAP EAF Phase"/>
+                                <PropertyValue Property="Value" Path="SAPEAFPhase"/>
+                            </Record>
+                        </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="activityName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="TypeName" String=""/>
+                        <PropertyValue Property="TypeNamePlural" String=""/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="EngagementInfo">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Start Date"/>
+                                <PropertyValue Property="Value" Path="startDate"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="End Date"/>
+                                <PropertyValue Property="Value" Path="endDate"/>
+                            </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.ActivitySteps">
+                <Annotation Term="UI.LineItem" Qualifier="Steps">
+                    <Collection>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Name"/>
+                                <PropertyValue Property="Value" Path="stepName"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Description"/>
+                                <PropertyValue Property="Value" Path="stepDescription"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Execution Status"/>
+                                <PropertyValue Property="Value" Path="executionStatus"/>
+                            </Record>
+                        </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.Tools/toolName">
+                <Annotation Term="com.sap.vocabularies.HTML5.v1.LinkTarget" String="_blank" />
+            </Annotations>
+            <Annotations Target="CatalogService.Tools">
+                <Annotation Term="UI.LineItem" Qualifier="Tools">
+                    <Collection>
+                            <Record Type="UI.DataFieldWithUrl">
+                                <PropertyValue Property="Label" String="Name"/>
+                                <PropertyValue Property="Value" Path="toolName"/>
+                                <PropertyValue Property="Url" Path="link"/>
+                            </Record>
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Purpose"/>
+                                <PropertyValue Property="Value" Path="purpose"/>
+                            </Record>
+                        </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.Stakeholders">
+                <Annotation Term="UI.LineItem" Qualifier="Stakeholders">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="name"/>
+                            <Annotation Term="UI.Hidden"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Email"/>
+                            <PropertyValue Property="Value" Path="email"/>
+                            <Annotation Term="UI.Hidden"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Designation"/>
+                            <PropertyValue Property="Value" Path="designation"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="RACI Classification"/>
+                           <PropertyValue Property="Value" Path="classification"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.Services/serviceName">
+                <Annotation Term="com.sap.vocabularies.HTML5.v1.LinkTarget" String="_blank" />
+            </Annotations>
+            <Annotations Target="CatalogService.Services">
+                <Annotation Term="UI.LineItem" Qualifier="Services">
+                    <Collection>
+                        <Record Type="UI.DataFieldWithUrl">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="serviceName"/>
+                            <PropertyValue Property="Url" Path="link"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Offering Team"/>
+                            <PropertyValue Property="Value" Path="offeringTeam"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="is Free?"/>
+                            <PropertyValue Property="Value" Path="isFree"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purpose"/>
+                           <PropertyValue Property="Value" Path="purpose"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Deliverables"/>
+                           <PropertyValue Property="Value" Path="deliverables"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.Reference/ReferenceName">
+                <Annotation Term="com.sap.vocabularies.HTML5.v1.LinkTarget" String="_blank" />
+            </Annotations>
+            <Annotations Target="CatalogService.Reference">
+                <Annotation Term="UI.LineItem" Qualifier="References">
+                    <Collection>
+                        <Record Type="UI.DataFieldWithUrl">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="ReferenceName"/>
+                            <PropertyValue Property="Url" Path="link"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Reference Type"/>
+                            <PropertyValue Property="Value" Path="ReferenceType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Description"/>
+                            <PropertyValue Property="Value" Path="description"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.StatusLookup/status">
+                <Annotation Term="Common.Text" Path="description"/>
+            </Annotations>
+            <Annotations Target="CatalogService.CustomerEngagements/duration">
+                <Annotation Term="Measures.Unit" String="months"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
